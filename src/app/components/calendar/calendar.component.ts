@@ -47,9 +47,6 @@ export class CalendarComponent implements OnInit {
     ]
   };
 
-  constructor() {
-  }
-
   ngOnInit(): void {
     this.currentDate = dayjs();
     this.generateCalendar();
