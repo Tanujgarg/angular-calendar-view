@@ -1,0 +1,22 @@
+<div class="calendar">
+  <div class="controllers">
+    <button (click)="today()">Today</button>
+    <button (click)="prevMonth()">Previous Month</button>
+    <button (click)="nextMonth()">Next Month</button>
+    <span>{{ currentDate.format('MMMM YYYY') }}</span>
+  </div>
+  <table>
+    <thead>
+    <tr>
+      <th *ngFor="let day of days">{{ day }}</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let week of monthDays">
+      <td *ngFor="let day of week" [class.other-month]="!day.isCurrentMonth">
+        <app-day (onEventClick)="handleEventClick($event)" [expandedDate]="expandedDate" [events]="events[day.date.format('YYYY-MM-DD')] || []" [day]="day"/>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

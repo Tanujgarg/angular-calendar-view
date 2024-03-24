@@ -1,0 +1,19 @@
+<div
+  *ngIf="day.isCurrentMonth"
+  class="day"
+  [class.today]="isToday">
+  <div class="date">
+    {{
+    day.date.format('D')
+  }}
+  </div>
+  <div class="events">
+    <div (click)="open()" class="event" *ngFor="let event of events">
+      {{event.title}}
+    </div>
+  </div>
+  <div class="tooltip" *ngIf="showTooltip">
+    Here is the details go
+    <button (click)="close()">close</button>
+  </div>
+</div>

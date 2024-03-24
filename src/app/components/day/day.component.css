@@ -1,0 +1,57 @@
+.day {
+  border: 1px solid #ccc;
+  min-height: 100px;
+  min-width: 100px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
+
+  .date {
+    font-size: 18px;
+  }
+
+  .events {
+    text-align: left;
+
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    .event {
+      padding: 2px;
+      font-size: 12px;
+
+      &:hover {
+        background: #eae4e4;
+      }
+    }
+  }
+
+  .tooltip {
+    background: white;
+    position: absolute;
+    top: 10px;
+    width: 200px;
+    right: -100px;
+    min-height: 200px;
+    box-shadow: 0 0 10px 5px #ccc;
+    z-index: 1;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+}
+
+.today {
+  .date {
+    height: 24px;
+    width: 24px;
+    line-height: 24px;
+    color: #fff;
+    background-color: rgb(26, 115, 232);
+    border-radius: 50%;
+    margin: auto;
+  }
+}

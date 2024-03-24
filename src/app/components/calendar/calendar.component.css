@@ -1,0 +1,36 @@
+.calendar {
+  padding: 16px;
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    border-spacing: 0;
+
+    thead {
+      tr {
+        background: #f1ecec;
+        border-radius: 5px;
+        th {
+          padding: 10px;
+        }
+      }
+    }
+  }
+
+  .controllers {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+
+    button {
+      background: none;
+      border: 1px solid #ccc;
+      margin-right: 5px;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+}
+
+
+
